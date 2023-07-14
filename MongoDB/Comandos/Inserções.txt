@@ -1,0 +1,26 @@
+use db_finance 
+
+show collections 
+
+//Inserir dados em JSON na collection billingCycle
+db.billingCycle.insert({name:"Fevereiro/25" , month: 2, year: 2005})
+
+//Salvar ou atualizar registro 
+db.billingCycle.save({name:"Fevereiro/25" , month: 2, year: 2005})
+
+//Inserir dados com objetos mais complexox na collection billingCycle
+db.billingCycle.insert({
+    ... name:"Fevereiro/25" , 
+    ... month: 2, 
+    ... year: 2005,
+    ... credits: [
+        {name: "salario" , value: 6500}
+    ],
+    debts: [
+        {name: "Luz", value: 250, status: "PAGO"},
+        {name: "Agua", value: 60, status: "PENDENTE"},
+    ]
+
+    })
+
+

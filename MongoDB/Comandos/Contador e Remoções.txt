@@ -1,0 +1,10 @@
+use db_finance
+
+//Mostrar quantidade de registros na collection billingCycle
+db.billingCycle.count()
+
+//Remover registro da collection billingCycle utilizando filtro 
+db.billingCycle.remove({month:2})
+
+//Apagar banco de dados 
+db.dropDatabase()

@@ -1,0 +1,23 @@
+//Executar o servidor do mongoDB
+mongob
+
+//Iniciar o console 
+mongo
+
+//Mostrar bases existentes
+show dbs
+
+//Mudar para a db_finance
+use db_finance
+
+//Mostrar db atual 
+db
+
+//Criar coleção billingCycles
+db.createCollection('billingCycles')
+
+//Mostrar coleções existentes
+show collections
+
+//Apagar coleção billingCycles
+db.billingCycles.drop()

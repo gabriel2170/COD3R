@@ -1,0 +1,29 @@
+
+use db_finance
+
+//Mostrar todos os registros da collection billingCycles
+db.billingCycles.find()
+
+
+//Mostrar todos os registros de forma mais legivel 
+db.billingCycles.find().pretty()
+
+
+//Mostrar o primeiro registro da collection billingCycles
+db.billingCycles.findOne()
+
+
+//Mostrar o registro utilizando filtro 
+db.billingCycles.findOne({status: "PAGO"})
+
+//Mostrar o registro apenas se possuir um determinado dado ou atributo
+db.billingCycles.findOne({creditis:{$exists:true}}).pretty()
+
+
+//Mostrar o registro utilizando filtro , podendo pular o primeiro ou algum registro
+db.billingCycles.findOne({year: 2005}).skip(1)
+
+
+//Mostrar o registro utilizando filtro , podendo pular o primeiro ou algum registro e limitar registros na consulta
+db.billingCycles.findOne({year: 2005}).skip(1).limit(1)
+

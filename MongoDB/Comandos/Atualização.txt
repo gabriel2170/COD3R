@@ -1,0 +1,8 @@
+use db_finance
+
+//Atualizar dados da collection billingCycles
+db.billingCycles.update(
+
+... {$and:[{month:2 } , {year: 2005}]}
+... {$set:{credit:[{name: "salario", value: 4500}]}}
+)0

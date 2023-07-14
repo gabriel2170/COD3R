@@ -1,0 +1,10 @@
+use db_finance
+
+//Agregar dados na collection billingCycles, utilizando project para somatoria dos valores de credit e debt e group para mostrar os dados agrupados com algum criterio do group
+
+db.billingCycles.aggregate([{
+... $project:{credit:{$sum:"$credits.value"}, debt:{$sum:$debts.value}},} 
+... {
+... $group:{_id:null, credit:{$sum:"$credit"}, debt:{$sum: "$debt"}}    
+}
+])
